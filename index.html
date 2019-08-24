@@ -52,7 +52,7 @@
 				$('#good,#bad').hide(250);
 			  
 				var pw = $('#inputPassword2').val();
-				if (pw == undefined || pw == null || pw === ') {
+				if (pw == undefined || pw == null || pw === '') {
 					return;
 				}
 				var sha1 = sjcl.codec.hex.fromBits(sjcl.hash.sha1.hash(pw));
