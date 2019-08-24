@@ -51,7 +51,11 @@
 				event.preventDefault();
 				$('#good,#bad').hide(250);
 			  
-				var sha1 = sjcl.codec.hex.fromBits(sjcl.hash.sha1.hash($('#inputPassword2').val()));
+				var pw = $('#inputPassword2').val();
+				if (pw == undefined || pw == null || pw === ') {
+					return;
+				}
+				var sha1 = sjcl.codec.hex.fromBits(sjcl.hash.sha1.hash(pw));
 				var hash = sha1.toUpperCase();
 				
 				// get file with hashes
