@@ -59,7 +59,7 @@
 				var hash = sha1.toUpperCase();
 				
 				// get file with hashes
-				var urlAjax = 'https://cdn.jsdelivr.net/gh/password-checker/data@5.0.1/%password%.txt';
+				var urlAjax = 'https://cdn.jsdelivr.net/gh/password-checker/data@6.0.0/%password%.txt';
 				var url = urlAjax.replace('%password%', encodeURIComponent(hash.substring(0, 3)) + '/' + encodeURIComponent(hash.substring(3, 5)));
 				$.ajax({
 		            url: url
