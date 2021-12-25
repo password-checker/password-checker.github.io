@@ -5,7 +5,7 @@
 <title>Example</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <!-- Bootstrap for a little design -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha256-T/zFmO5s/0aSwc6ics2KLxlfbewyRz6UNw1s3Ppf5gE=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha256-YvdLHPgkqJ8DVUxjjnGVlMMJtNimJ6dYkowFFvp4kKs=" crossorigin="anonymous">
 </head>
 
 <body>
@@ -39,10 +39,10 @@
 	</div>
 
 	<!-- jQuery for event handling and ajax call -->
-	<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 	<!-- sjcl for SHA-1 calculation -->
-    <script src="https://cdn.jsdelivr.net/npm/sjcl@1.0.8/sjcl.js" integrity="sha256-0JqGiPN8dEK7HmaZtG77GR2Sge8FpJJYb6D1TcTlEQo=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sjcl@1.0.8/core/sha1.js" integrity="sha256-7igykOsNY2rOyVeM5XZ1fZn3asWkLDloYa07o7SBhtA=" crossorigin="anonymous"></script>
+    	<script src="https://cdn.jsdelivr.net/npm/sjcl@1.0.8/sjcl.js" integrity="sha256-0JqGiPN8dEK7HmaZtG77GR2Sge8FpJJYb6D1TcTlEQo=" crossorigin="anonymous"></script>
+    	<script src="https://cdn.jsdelivr.net/npm/sjcl@1.0.8/core/sha1.js" integrity="sha256-7igykOsNY2rOyVeM5XZ1fZn3asWkLDloYa07o7SBhtA=" crossorigin="anonymous"></script>
     
     <!-- Example script -->
     <script>
@@ -59,7 +59,7 @@
 				var hash = sha1.toUpperCase();
 				
 				// get file with hashes
-				var urlAjax = 'https://cdn.jsdelivr.net/gh/password-checker/data-v7-%mainversion%@7.0.0/%password%.txt';
+				var urlAjax = 'https://cdn.jsdelivr.net/gh/password-checker/data-v8-%mainversion%@8.0.0/%password%.txt';
 				var url = urlAjax.replace('%password%', encodeURIComponent(hash.substring(0, 3)) + '/' + encodeURIComponent(hash.substring(3, 5)));
 				url = url.replace('%mainversion%', encodeURIComponent(hash.substring(0, 1)));
 				$.ajax({
